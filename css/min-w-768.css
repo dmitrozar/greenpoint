@@ -1,0 +1,84 @@
+@media (min-width: 768px) {
+  .container {
+    width: 648px;
+  }
+  .header__brand {
+    font: bold 1.75rem/2rem "Gotham", sans-serif;
+  }
+  .header__content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .header__content--left, .header__content--right {
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
+  }
+  .header__content--right img {
+    margin: 0 auto;
+  }
+  .header__content--btn {
+    display: inline-block;
+  }
+  .header__content--btn:last-child {
+    margin-left: 1rem;
+  }
+  .header__content--btn-wr {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .plants__title {
+    margin-bottom: 1rem;
+    font: 400 1.75rem/1 "Gotham", sans-serif;
+  }
+  .plants__title-wr {
+    margin-bottom: 2rem;
+  }
+  .plants__title--description {
+    font: 400 0.875rem/1.0625rem "Gotham", sans-serif;
+  }
+  .plants__content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .plants__content--left, .plants__content--right {
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
+  }
+  .plants__content--left {
+    background: center/245px no-repeat url(../images/bg-view.png);
+  }
+  .plants__content--left img {
+    max-width: 165px;
+    height: auto;
+    margin: 0 auto;
+  }
+  .plants__card {
+    position: relative;
+  }
+  .plants__card::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 100vw;
+    background: #f9f9f9;
+    content: "";
+    border-radius: 3em;
+    -webkit-transform: skewX(10deg);
+        -ms-transform: skewX(10deg);
+            transform: skewX(10deg);
+    -webkit-transform-origin: bottom;
+        -ms-transform-origin: bottom;
+            transform-origin: bottom;
+    z-index: -1;
+  }
+}

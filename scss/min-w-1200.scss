@@ -1,0 +1,69 @@
+$color-brand: #1FC48B;
+$color-black: #181818;
+$color-card-grey: #F9F9F9;
+$font-default: "Gotham", sans-serif;
+
+@media (min-width: 1200px) {
+    .container {
+        width: 1200px;
+    }
+
+    .header {
+        &__brand {
+            font: bold 2rem/2rem $font-default;
+        }
+
+        &__title {
+            margin-bottom: 2.25rem;
+            font: bold 3.75rem/4.5rem $font-default;
+        }
+
+        &__description {
+            margin-bottom: 3.5rem;
+        }
+    }
+
+    .plants {
+        padding: 4.5rem 0 7.5rem;
+
+        &__title {
+            margin-bottom: 1.5rem;
+            font: 400 2.625rem/1 $font-default;
+
+            &-wr {
+                margin-bottom: 3rem;
+            }
+
+            &--description {
+                font: 400 1rem/1.1875rem $font-default;
+            }
+        }
+
+        &__content {
+            &--left {
+                background: center / 390px no-repeat url(../images/bg-view.png);
+
+                img {
+                    max-width: 265px;
+                }
+            }
+        }
+
+        &__card {
+            padding: 2.5rem 0 3.5625rem;
+        }
+
+        &__list--item {
+            &:not(:last-child) {
+                margin-bottom: 2rem;
+            }
+            &-heading {
+                margin-bottom: .5rem;
+            }
+        }
+    }
+
+    .stats {
+        padding: 4.5rem 0 7.5rem;
+    }
+}

@@ -3,4 +3,93 @@
 $color-brand: #1FC48B;
 $color-black: #181818;
 $color-card-grey: #F9F9F9;
-$font-default: "Gotham", sans-serif;
+$font-default: "Gotham",
+sans-serif;
+
+body {
+    width: 100%;
+    font: 400 1rem/1.2 $font-default;
+    color: $color-black;
+    text-align: left;
+    background-color: #fff;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.header {
+    &__nav {
+        margin-top: 1rem;
+    }
+
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__brand {
+        display: flex;
+        align-items: center;
+        font: bold 1.5rem/1 $font-default;
+
+        img {
+            margin-right: 1rem;
+        }
+    }
+
+    &__button {
+        display: inline-block;
+        padding: .875rem 2rem;
+        border-radius: .5rem;
+        font: 400 .875rem/.875rem $font-default;
+        color: #fff;
+        background-color: $color-brand;
+    }
+}
+
+.plants {
+    &__title {
+        &-wr {
+            text-align: center;
+        }
+    }
+
+    &__list--item {
+        display: flex;
+        width: 100%;
+        &:not(:last-child) {
+            margin-bottom: 1.5rem;
+        }
+
+        &-icon {
+            padding: 1.125rem;
+            margin-right: 1.0625rem;
+            border-radius: 12px;
+            background-color: #FFFFFF;
+            box-shadow: 0px 4px 4px rgba(233, 233, 233, 0.42);
+        }
+
+        &-heading {
+            margin-bottom: .25rem;
+            font: 600 1rem/1.1875 $font-default;
+        }
+
+        &-description {
+            font: 400 .875rem/1.0625 $font-default;
+        }
+    }
+}
+
+@import "min-w-768";
+
+@import "min-w-1200";

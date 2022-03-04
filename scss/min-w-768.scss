@@ -1,0 +1,97 @@
+$color-brand: #1FC48B;
+$color-black: #181818;
+$color-card-grey: #F9F9F9;
+$font-default: "Gotham",
+sans-serif;
+
+@media (min-width: 768px) {
+    .container {
+        width: 648px;
+    }
+
+    .header {
+        &__brand {
+            font: bold 1.75rem/2rem $font-default;
+        }
+
+        &__content {
+            display: flex;
+            align-items: center;
+
+            &--left,
+            &--right {
+                flex-basis: 50%;
+            }
+
+            &--right {
+
+                img {
+                    margin: 0 auto;
+                }
+            }
+
+            &--btn {
+                display: inline-block;
+
+                &:last-child {
+                    margin-left: 1rem;
+                }
+
+                &-wr {
+                    display: flex;
+                }
+            }
+        }
+    }
+
+    .plants {
+        &__title {
+            margin-bottom: 1rem;
+            font: 400 1.75rem/1 $font-default;
+
+            &-wr {
+                margin-bottom: 2rem;
+            }
+
+            &--description {
+                font: 400 .875rem/1.0625rem $font-default;
+            }
+        }
+
+        &__content {
+            display: flex;
+            align-items: center;
+
+            &--left,
+            &--right {
+                flex-basis: 50%;
+            }
+
+            &--left {
+                background: center / 245px no-repeat url(../images/bg-view.png);
+
+                img {
+                    max-width: 165px;
+                    height: auto;
+                    margin: 0 auto;
+                }
+            }
+        }
+        &__card {
+            position: relative;
+            &::before {
+                position: absolute;
+                top: 0;
+                left: 0;
+                bottom: 0;
+                width: 100vw;
+                background: #f9f9f9;
+                content: "";
+                border-radius: 3em;
+                transform: skewX(10deg);
+                transform-origin: bottom;
+                z-index: -1;
+            }
+        }
+    }
+}
