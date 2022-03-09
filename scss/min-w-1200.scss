@@ -11,6 +11,10 @@ $font-default: "Gotham", sans-serif;
     .header {
         &__brand {
             font: bold 2rem/2rem $font-default;
+            img {
+                width: 2.875rem;
+                margin-right: 1rem;
+            }
         }
 
         &__title {
@@ -20,6 +24,11 @@ $font-default: "Gotham", sans-serif;
 
         &__description {
             margin-bottom: 3.5rem;
+            font: 400 1.125rem/1.375rem $font-default;
+        }
+
+        &__content--btn {
+            flex: 0 0 180px;
         }
     }
 
@@ -50,7 +59,21 @@ $font-default: "Gotham", sans-serif;
         }
 
         &__card {
-            padding: 2.5rem 0 3.5625rem;
+            position: relative;
+            padding: 2.5rem 0 3.5625rem 1rem;
+            &::before {
+                position: absolute;
+                top: 0;
+                left: 0;
+                bottom: 0;
+                width: 100vw;
+                background: #f9f9f9;
+                content: "";
+                border-radius: 3em;
+                transform: skewX(10deg);
+                transform-origin: bottom;
+                z-index: -1;
+            }
         }
 
         &__list--item {
@@ -65,5 +88,30 @@ $font-default: "Gotham", sans-serif;
 
     .stats {
         padding: 4.5rem 0 7.5rem;
+    }
+
+    .tasks {
+        &__content--left {
+            flex: 0 0 590px;
+        }
+
+        &__title {
+            margin-bottom: 2rem;
+            font: 700 2.75rem/3rem $font-default;
+            letter-spacing: -0.005em;
+        }
+
+        &__description {
+            font: 400 1rem/1.1875rem $font-default;
+        }
+
+        &__content--right {
+            flex: 0 0 390px;
+            background: center/390px no-repeat url(../images/bg-view.png);
+
+            img {
+                max-width: 265px;
+            }
+        }
     }
 }

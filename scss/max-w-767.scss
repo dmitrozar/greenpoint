@@ -1,0 +1,61 @@
+$color-brand: #1FC48B;
+$color-black: #181818;
+$color-card-grey: #F9F9F9;
+$font-default: "Gotham",
+sans-serif;
+
+@media (max-width: 767px) {
+    .header {
+        padding: .75rem 0 2.5rem;
+
+        &__content {
+            display: flex;
+            width: 100%;
+            flex-direction: column;
+            padding: 0 1rem;
+
+            &--left {
+                order: 13;
+            }
+
+            &--right img {
+                margin: 2rem auto 2.25rem;
+                max-width: 142px;
+            }
+
+            &--btn {
+                flex: 0 0 48%;
+
+                &-wr {
+                    justify-content: space-between;
+                }
+            }
+        }
+    }
+
+    .plants,
+    .tasks {
+        padding: 1.5rem 0 2.5rem
+    }
+
+    .plants__content--left,
+    .tasks__content--right {
+        display: none;
+    }
+
+    .plants {
+        &__title--description {
+            display: none;
+        }
+    }
+    .tasks {
+        &__title,
+        &__description {
+            text-align: center;
+        }
+
+        &__body {
+            padding: 0 1rem;
+        }
+    }
+}

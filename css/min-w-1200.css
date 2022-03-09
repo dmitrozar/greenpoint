@@ -5,12 +5,22 @@
   .header__brand {
     font: bold 2rem/2rem "Gotham", sans-serif;
   }
+  .header__brand img {
+    width: 2.875rem;
+    margin-right: 1rem;
+  }
   .header__title {
     margin-bottom: 2.25rem;
     font: bold 3.75rem/4.5rem "Gotham", sans-serif;
   }
   .header__description {
     margin-bottom: 3.5rem;
+    font: 400 1.125rem/1.375rem "Gotham", sans-serif;
+  }
+  .header__content--btn {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 180px;
+            flex: 0 0 180px;
   }
   .plants {
     padding: 4.5rem 0 7.5rem;
@@ -32,7 +42,25 @@
     max-width: 265px;
   }
   .plants__card {
-    padding: 2.5rem 0 3.5625rem;
+    position: relative;
+    padding: 2.5rem 0 3.5625rem 1rem;
+  }
+  .plants__card::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 100vw;
+    background: #f9f9f9;
+    content: "";
+    border-radius: 3em;
+    -webkit-transform: skewX(10deg);
+        -ms-transform: skewX(10deg);
+            transform: skewX(10deg);
+    -webkit-transform-origin: bottom;
+        -ms-transform-origin: bottom;
+            transform-origin: bottom;
+    z-index: -1;
   }
   .plants__list--item:not(:last-child) {
     margin-bottom: 2rem;
@@ -42,5 +70,27 @@
   }
   .stats {
     padding: 4.5rem 0 7.5rem;
+  }
+  .tasks__content--left {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 590px;
+            flex: 0 0 590px;
+  }
+  .tasks__title {
+    margin-bottom: 2rem;
+    font: 700 2.75rem/3rem "Gotham", sans-serif;
+    letter-spacing: -0.005em;
+  }
+  .tasks__description {
+    font: 400 1rem/1.1875rem "Gotham", sans-serif;
+  }
+  .tasks__content--right {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 390px;
+            flex: 0 0 390px;
+    background: center/390px no-repeat url(../images/bg-view.png);
+  }
+  .tasks__content--right img {
+    max-width: 265px;
   }
 }

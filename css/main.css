@@ -31,6 +31,10 @@ dd {
   margin: 0;
 }
 
+html {
+  height: 100%;
+}
+
 /* Выставляем основные настройки по-умолчанию для body */
 body {
   min-height: 100vh;
@@ -87,6 +91,70 @@ select {
   }
 }
 
+@font-face {
+  font-family: 'Gotham';
+  src: url("../fonts/Gotham-Thin.eot");
+  src: local("Gotham Thin"), local("Gotham-Thin"), url("../fonts/Gotham-Thin.eot?#iefix") format("embedded-opentype"), url("../fonts/Gotham-Thin.woff2") format("woff2"), url("../fonts/Gotham-Thin.woff") format("woff"), url("../fonts/Gotham-Thin.ttf") format("truetype");
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Gotham';
+  src: url("../fonts/Gotham-XLight.eot");
+  src: local("Gotham ExtraLight"), local("Gotham-XLight"), url("../fonts/Gotham-XLight.eot?#iefix") format("embedded-opentype"), url("../fonts/Gotham-XLight.woff2") format("woff2"), url("../fonts/Gotham-XLight.woff") format("woff"), url("../fonts/Gotham-XLight.ttf") format("truetype");
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Gotham';
+  src: url("../fonts/Gotham-Light.eot");
+  src: local("Gotham Light"), local("Gotham-Light"), url("../fonts/Gotham-Light.eot?#iefix") format("embedded-opentype"), url("../fonts/Gotham-Light.woff2") format("woff2"), url("../fonts/Gotham-Light.woff") format("woff"), url("../fonts/Gotham-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Gotham';
+  src: url("../fonts/Gotham-Book.eot");
+  src: local("Gotham Book"), local("Gotham-Book"), url("../fonts/Gotham-Book.eot?#iefix") format("embedded-opentype"), url("../fonts/Gotham-Book.woff2") format("woff2"), url("../fonts/Gotham-Book.woff") format("woff"), url("../fonts/Gotham-Book.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Gotham';
+  src: url("../fonts/Gotham-Medium.eot");
+  src: local("Gotham Medium"), local("Gotham-Medium"), url("../fonts/Gotham-Medium.eot?#iefix") format("embedded-opentype"), url("../fonts/Gotham-Medium.woff2") format("woff2"), url("../fonts/Gotham-Medium.woff") format("woff"), url("../fonts/Gotham-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Gotham';
+  src: url("../fonts/Gotham-Bold.eot");
+  src: local("Gotham Bold"), local("Gotham-Bold"), url("../fonts/Gotham-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/Gotham-Bold.woff2") format("woff2"), url("../fonts/Gotham-Bold.woff") format("woff"), url("../fonts/Gotham-Bold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Gotham Ultra';
+  src: url("../fonts/Gotham-Ultra.eot");
+  src: local("Gotham Ultra"), local("Gotham-Ultra"), url("../fonts/Gotham-Ultra.eot?#iefix") format("embedded-opentype"), url("../fonts/Gotham-Ultra.woff2") format("woff2"), url("../fonts/Gotham-Ultra.woff") format("woff"), url("../fonts/Gotham-Ultra.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Gotham';
+  src: url("../fonts/Gotham-Black.eot");
+  src: local("Gotham Black"), local("Gotham-Black"), url("../fonts/Gotham-Black.eot?#iefix") format("embedded-opentype"), url("../fonts/Gotham-Black.woff2") format("woff2"), url("../fonts/Gotham-Black.woff") format("woff"), url("../fonts/Gotham-Black.ttf") format("truetype");
+  font-weight: 800;
+  font-style: normal;
+}
+
 body {
   width: 100%;
   font: 400 1rem/1.2 "Gotham", sans-serif;
@@ -134,7 +202,9 @@ body {
 }
 
 .header__brand img {
-  margin-right: 1rem;
+  width: 2rem;
+  height: auto;
+  margin-right: .5rem;
 }
 
 .header__button {
@@ -146,7 +216,44 @@ body {
   background-color: #1FC48B;
 }
 
+.header__title {
+  margin-bottom: 1.5rem;
+  font: bold 1.875rem/2.25rem "Gotham", sans-serif;
+}
+
+.header__description {
+  margin-bottom: 2rem;
+  line-height: 1.1875rem;
+}
+
+.header__content--right img {
+  margin: 0 auto;
+}
+
+.header__content--btn {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 48%;
+          flex: 0 0 48%;
+}
+
+.header__content--btn img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.header__content--btn-wr {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.plants__title {
+  font: 400 1.5rem/1 "Gotham", sans-serif;
+}
+
 .plants__title-wr {
+  margin-bottom: 2rem;
   text-align: center;
 }
 
@@ -162,12 +269,28 @@ body {
 }
 
 .plants__list--item-icon {
-  padding: 1.125rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 60px;
+          flex: 0 0 60px;
+  width: 100%;
+  height: 60px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin-right: 1.0625rem;
   border-radius: 12px;
   background-color: #FFFFFF;
+  border: 1px solid #eee;
   -webkit-box-shadow: 0px 4px 4px rgba(233, 233, 233, 0.42);
           box-shadow: 0px 4px 4px rgba(233, 233, 233, 0.42);
+}
+
+.plants__list--item-icon img {
+  width: 1.5rem;
+  height: auto;
 }
 
 .plants__list--item-heading {
@@ -177,6 +300,70 @@ body {
 
 .plants__list--item-description {
   font: 400 0.875rem/1.0625 "Gotham", sans-serif;
+}
+
+.tasks__title {
+  margin-bottom: 1rem;
+  letter-spacing: -0.005em;
+  font: 700 1.125rem/139% "Gotham", sans-serif;
+}
+
+.tasks__description {
+  font: 400 0.875rem/1.0625rem "Gotham", sans-serif;
+}
+
+.stats {
+  padding: 3rem 0;
+  color: #fff;
+  background-color: #1FC48B;
+}
+
+.stats__title {
+  margin-bottom: 1.5rem;
+  font: 400 1.5rem/1 "Gotham", sans-serif;
+}
+
+.stats__title-wr {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.stats__description {
+  font: 400 0.875rem/1.0625rem "Gotham", sans-serif;
+}
+
+.stats__body--left img {
+  max-width: 220px;
+  height: auto;
+  margin: 0 auto 2rem;
+}
+
+.stats__card {
+  color: #181818;
+  background-color: #F9F9F9;
+}
+
+.stats__item:not(:last-child) {
+  margin-bottom: 1.5rem;
+}
+
+.stats__item--heading {
+  margin-bottom: .5rem;
+  font: 600 1rem/1.25rem "Gotham", sans-serif;
+}
+
+.stats__item--description {
+  font: 400 0.875rem/1.0625rem "Gotham", sans-serif;
+}
+
+.slider__body img {
+  max-width: 116px;
+  height: auto;
+  margin: 0 auto;
+}
+
+.slider__steps {
+  font: 500 1rem/1.25rem "Gotham", sans-serif;
 }
 
 @media (min-width: 768px) {
@@ -197,9 +384,6 @@ body {
   .header__content--left, .header__content--right {
     -ms-flex-preferred-size: 50%;
         flex-basis: 50%;
-  }
-  .header__content--right img {
-    margin: 0 auto;
   }
   .header__content--btn {
     display: inline-block;
@@ -242,25 +426,41 @@ body {
     height: auto;
     margin: 0 auto;
   }
-  .plants__card {
-    position: relative;
+  .tasks__body {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
-  .plants__card::before {
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    width: 100vw;
-    background: #f9f9f9;
-    content: "";
-    border-radius: 3em;
-    -webkit-transform: skewX(10deg);
-        -ms-transform: skewX(10deg);
-            transform: skewX(10deg);
-    -webkit-transform-origin: bottom;
-        -ms-transform-origin: bottom;
-            transform-origin: bottom;
-    z-index: -1;
+  .tasks__content--left {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 360px;
+            flex: 0 0 360px;
+  }
+  .tasks__title {
+    margin-bottom: 1.5rem;
+    font: 700 1.5rem/1.75rem "Gotham", sans-serif;
+    letter-spacing: -0.005em;
+  }
+  .tasks__description {
+    font: 400 0.875rem/1.0625rem "Gotham", sans-serif;
+  }
+  .tasks__content--right {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 245px;
+            flex: 0 0 245px;
+    background: center/245px no-repeat url(../images/bg-view.png);
+  }
+  .tasks__content--right img {
+    max-width: 165px;
+    height: auto;
+    margin: 0 auto;
   }
 }
 
@@ -271,12 +471,22 @@ body {
   .header__brand {
     font: bold 2rem/2rem "Gotham", sans-serif;
   }
+  .header__brand img {
+    width: 2.875rem;
+    margin-right: 1rem;
+  }
   .header__title {
     margin-bottom: 2.25rem;
     font: bold 3.75rem/4.5rem "Gotham", sans-serif;
   }
   .header__description {
     margin-bottom: 3.5rem;
+    font: 400 1.125rem/1.375rem "Gotham", sans-serif;
+  }
+  .header__content--btn {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 180px;
+            flex: 0 0 180px;
   }
   .plants {
     padding: 4.5rem 0 7.5rem;
@@ -298,7 +508,25 @@ body {
     max-width: 265px;
   }
   .plants__card {
-    padding: 2.5rem 0 3.5625rem;
+    position: relative;
+    padding: 2.5rem 0 3.5625rem 1rem;
+  }
+  .plants__card::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 100vw;
+    background: #f9f9f9;
+    content: "";
+    border-radius: 3em;
+    -webkit-transform: skewX(10deg);
+        -ms-transform: skewX(10deg);
+            transform: skewX(10deg);
+    -webkit-transform-origin: bottom;
+        -ms-transform-origin: bottom;
+            transform-origin: bottom;
+    z-index: -1;
   }
   .plants__list--item:not(:last-child) {
     margin-bottom: 2rem;
@@ -308,5 +536,80 @@ body {
   }
   .stats {
     padding: 4.5rem 0 7.5rem;
+  }
+  .tasks__content--left {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 590px;
+            flex: 0 0 590px;
+  }
+  .tasks__title {
+    margin-bottom: 2rem;
+    font: 700 2.75rem/3rem "Gotham", sans-serif;
+    letter-spacing: -0.005em;
+  }
+  .tasks__description {
+    font: 400 1rem/1.1875rem "Gotham", sans-serif;
+  }
+  .tasks__content--right {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 390px;
+            flex: 0 0 390px;
+    background: center/390px no-repeat url(../images/bg-view.png);
+  }
+  .tasks__content--right img {
+    max-width: 265px;
+  }
+}
+
+@media (max-width: 767px) {
+  .header {
+    padding: .75rem 0 2.5rem;
+  }
+  .header__content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 0 1rem;
+  }
+  .header__content--left {
+    -webkit-box-ordinal-group: 14;
+        -ms-flex-order: 13;
+            order: 13;
+  }
+  .header__content--right img {
+    margin: 2rem auto 2.25rem;
+    max-width: 142px;
+  }
+  .header__content--btn {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 48%;
+            flex: 0 0 48%;
+  }
+  .header__content--btn-wr {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .plants,
+  .tasks {
+    padding: 1.5rem 0 2.5rem;
+  }
+  .plants__content--left,
+  .tasks__content--right {
+    display: none;
+  }
+  .plants__title--description {
+    display: none;
+  }
+  .tasks__title, .tasks__description {
+    text-align: center;
+  }
+  .tasks__body {
+    padding: 0 1rem;
   }
 }
