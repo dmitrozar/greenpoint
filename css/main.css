@@ -213,7 +213,7 @@ body {
   border-radius: .5rem;
   font: 400 0.875rem/0.875rem "Gotham", sans-serif;
   color: #fff;
-  background-color: #1fc48b;
+  background-color: #06CF96;
 }
 
 .header__title {
@@ -315,7 +315,7 @@ body {
 .stats {
   padding: 3rem 0;
   color: #fff;
-  background-color: #1fc48b;
+  background-color: #06CF96;
 }
 
 .stats__title {
@@ -338,9 +338,51 @@ body {
   margin: 0 auto 2rem;
 }
 
+.stats__body--right {
+  position: relative;
+}
+
+.stats__body--right::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 100vw;
+  background: #f9f9f9;
+  content: " ";
+  border-radius: 3em;
+  -webkit-transform: skewX(10deg);
+      -ms-transform: skewX(10deg);
+          transform: skewX(10deg);
+  -webkit-transform-origin: bottom;
+      -ms-transform-origin: bottom;
+          transform-origin: bottom;
+  opacity: 0.2;
+  z-index: 1;
+}
+
+.stats__body--right::after {
+  position: absolute;
+  top: 78px;
+  left: 90px;
+  bottom: 55px;
+  width: 100vw;
+  background: #f9f9f9;
+  content: " ";
+  border-radius: 3em;
+  -webkit-transform: skewX(10deg);
+      -ms-transform: skewX(10deg);
+          transform: skewX(10deg);
+  -webkit-transform-origin: bottom;
+      -ms-transform-origin: bottom;
+          transform-origin: bottom;
+  z-index: 2;
+}
+
 .stats__card {
+  position: relative;
   color: #181818;
-  background-color: #F9F9F9;
+  z-index: 3;
 }
 
 .stats__item:not(:last-child) {
@@ -408,7 +450,7 @@ body {
 
 .form {
   padding: 2rem 0 2.5rem;
-  background-color: #1fc48b;
+  background-color: #06CF96;
 }
 
 .form .title-w100 {
@@ -489,7 +531,7 @@ body {
   border-radius: .5rem;
   font: 500 0.875rem/1 "Gotham", sans-serif;
   color: #fff;
-  background-color: #1fc48b;
+  background-color: #06CF96;
   text-decoration: none;
   cursor: pointer;
 }
@@ -500,7 +542,7 @@ body {
 
 .footer {
   padding-bottom: 2rem;
-  background-color: #1fc48b;
+  background-color: #06CF96;
 }
 
 .footer__left {
@@ -605,7 +647,7 @@ body {
     left: 140px;
     bottom: 45px;
     width: 100vw;
-    background: #1fc48b;
+    background: #06CF96;
     content: "";
     border-radius: 3em;
     -webkit-transform: skewX(15deg);
@@ -704,11 +746,38 @@ body {
             flex: 0 0 100%;
   }
   .stats__body {
-    max-width: 680px;
-    padding-left: 1rem;
-    padding-right: 1rem;
-    margin-left: auto;
-    margin-right: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .stats__body--left {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 50%;
+            flex: 0 0 50%;
+    max-width: 50%;
+  }
+  .stats__body--left img {
+    max-width: 100%;
+    margin-bottom: 0;
+  }
+  .stats__body--right {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 50%;
+            flex: 0 0 50%;
+    max-width: 50%;
+  }
+  .stats__card {
+    padding: 2rem 0;
+  }
+  .stats__item {
+    padding-left: 3rem;
+  }
+  .stats__item--heading {
+    font: 500 1.125rem/1.25rem "Gotham", sans-serif;
   }
   .slider__screen-wr {
     background-size: 242px;
@@ -962,6 +1031,51 @@ body {
   }
   .stats {
     padding: 4.5rem 0 7.5rem;
+  }
+  .stats__title {
+    margin-bottom: 1.5rem;
+    font: 400 2.625rem/1 "Gotham", sans-serif;
+  }
+  .stats__title-wr {
+    margin-bottom: 3rem;
+  }
+  .stats__description {
+    max-width: 850px;
+    margin: 0 auto;
+    font: 400 1rem/1.1875rem "Gotham", sans-serif;
+  }
+  .stats__body--left {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 auto;
+            flex: 0 0 auto;
+    max-width: auto;
+  }
+  .stats__body--right {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 620px;
+            flex: 0 0 620px;
+    max-width: 620px;
+  }
+  .stats__body--right::before {
+    left: 120px;
+  }
+  .stats__body--right::after {
+    left: 180px;
+  }
+  .stats__card {
+    padding: 9rem 0 7.6rem;
+  }
+  .stats__item:not(:last-child) {
+    margin-bottom: 3rem;
+  }
+  .stats__item {
+    padding-left: 14rem;
+  }
+  .stats__item--heading {
+    font: 500 1.5rem/1.625rem "Gotham", sans-serif;
+  }
+  .stats__item--description {
+    font: 400 1rem/1.1875rem "Gotham", sans-serif;
   }
   .tasks {
     padding-bottom: 4.5rem;

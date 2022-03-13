@@ -1,7 +1,8 @@
 @import "reset";
 @import "fonts";
 
-$color-brand: rgba(31, 196, 139, 1);
+$color-brand: #06CF96;
+// $color-black: #43444A;
 $color-black: #181818;
 $color-card-grey: #F9F9F9;
 $font-default: "Gotham",
@@ -187,11 +188,42 @@ body {
                 margin: 0 auto 2rem;
             }
         }
+        &--right {
+            position: relative;
+            &::before {
+                position: absolute;
+                top: 0;
+                left: 0;
+                bottom: 0;
+                width: 100vw;
+                background: #f9f9f9;
+                content: " ";
+                border-radius: 3em;
+                transform: skewX(10deg);
+                transform-origin: bottom;
+                opacity: 0.2;
+                z-index: 1;
+            }
+            &::after {
+                position: absolute;
+                top: 78px;
+                left: 90px;
+                bottom: 55px;
+                width: 100vw;
+                background: #f9f9f9;
+                content: " ";
+                border-radius: 3em;
+                transform: skewX(10deg);
+                transform-origin: bottom;
+                z-index: 2;
+            }
+        }
     }
 
     &__card {
+        position: relative;
         color: $color-black;
-        background-color: $color-card-grey;
+        z-index: 3;
     }
 
     &__item {

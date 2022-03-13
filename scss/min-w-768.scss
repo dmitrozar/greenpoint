@@ -1,4 +1,4 @@
-$color-brand: rgba(31, 196, 139, 1);
+$color-brand: #06CF96;
 $color-black: #181818;
 $color-card-grey: #F9F9F9;
 $font-default: "Gotham",
@@ -142,11 +142,32 @@ sans-serif;
         }
 
         &__body {
-            max-width: 680px;
-            padding-left: 1rem;
-            padding-right: 1rem;
-            margin-left: auto;
-            margin-right: auto;
+            display: flex;
+            width: 100%;
+            align-items: center;
+        }
+        &__body--left {
+            flex: 0 0 50%;
+            max-width: 50%;
+            img {
+                max-width: 100%;
+                margin-bottom: 0;
+            }
+        }
+        &__body--right {
+            flex: 0 0 50%;
+            max-width: 50%;
+        }
+        &__card {
+            padding: 2rem 0;
+        }
+
+        &__item {
+            padding-left: 3rem;
+        }
+
+        &__item--heading {
+            font:500 1.125rem/1.25rem $font-default;
         }
     }
 

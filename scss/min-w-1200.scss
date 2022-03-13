@@ -1,4 +1,4 @@
-$color-brand: rgba(31, 196, 139, 1);
+$color-brand: #06CF96;
 $color-black: #181818;
 $color-card-grey: #F9F9F9;
 $font-default: "Gotham", sans-serif;
@@ -96,6 +96,55 @@ $padd-article: 4.5rem 0 7.5rem;
 
     .stats {
         padding: $padd-article;
+        &__title {
+            margin-bottom: 1.5rem;
+            font: 400 2.625rem/1 $font-default;
+
+            &-wr {
+                margin-bottom: 3rem;
+            }
+        }
+
+        &__description {
+            max-width: 850px;
+            margin: 0 auto;
+            font: 400 1rem/1.1875rem $font-default;
+        }
+
+        &__body--left {
+            flex: 0 0 auto;
+            max-width: auto;
+        }
+        &__body--right {
+            flex: 0 0 620px;
+            max-width: 620px;
+            &::before {
+                left: 120px;
+            }
+            &::after {
+                left: 180px;
+            }
+        }
+
+        &__card {
+            padding: 9rem 0 7.6rem;
+        }
+
+        &__item:not(:last-child) {
+            margin-bottom: 3rem;
+        }
+
+        &__item {
+            padding-left: 14rem;
+        }
+
+        &__item--heading {
+            font: 500 1.5rem/1.625rem $font-default;
+        }
+
+        &__item--description {
+            font: 400 1rem/1.1875rem $font-default;
+        }
     }
 
     .tasks {

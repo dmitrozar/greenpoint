@@ -75,6 +75,51 @@
   .stats {
     padding: 4.5rem 0 7.5rem;
   }
+  .stats__title {
+    margin-bottom: 1.5rem;
+    font: 400 2.625rem/1 "Gotham", sans-serif;
+  }
+  .stats__title-wr {
+    margin-bottom: 3rem;
+  }
+  .stats__description {
+    max-width: 850px;
+    margin: 0 auto;
+    font: 400 1rem/1.1875rem "Gotham", sans-serif;
+  }
+  .stats__body--left {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 auto;
+            flex: 0 0 auto;
+    max-width: auto;
+  }
+  .stats__body--right {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 620px;
+            flex: 0 0 620px;
+    max-width: 620px;
+  }
+  .stats__body--right::before {
+    left: 120px;
+  }
+  .stats__body--right::after {
+    left: 180px;
+  }
+  .stats__card {
+    padding: 9rem 0 7.6rem;
+  }
+  .stats__item:not(:last-child) {
+    margin-bottom: 3rem;
+  }
+  .stats__item {
+    padding-left: 14rem;
+  }
+  .stats__item--heading {
+    font: 500 1.5rem/1.625rem "Gotham", sans-serif;
+  }
+  .stats__item--description {
+    font: 400 1rem/1.1875rem "Gotham", sans-serif;
+  }
   .tasks {
     padding-bottom: 4.5rem;
   }

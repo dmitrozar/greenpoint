@@ -29,7 +29,7 @@
     left: 140px;
     bottom: 45px;
     width: 100vw;
-    background: #1fc48b;
+    background: #06CF96;
     content: "";
     border-radius: 3em;
     -webkit-transform: skewX(15deg);
@@ -128,11 +128,38 @@
             flex: 0 0 100%;
   }
   .stats__body {
-    max-width: 680px;
-    padding-left: 1rem;
-    padding-right: 1rem;
-    margin-left: auto;
-    margin-right: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .stats__body--left {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 50%;
+            flex: 0 0 50%;
+    max-width: 50%;
+  }
+  .stats__body--left img {
+    max-width: 100%;
+    margin-bottom: 0;
+  }
+  .stats__body--right {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 50%;
+            flex: 0 0 50%;
+    max-width: 50%;
+  }
+  .stats__card {
+    padding: 2rem 0;
+  }
+  .stats__item {
+    padding-left: 3rem;
+  }
+  .stats__item--heading {
+    font: 500 1.125rem/1.25rem "Gotham", sans-serif;
   }
   .slider__screen-wr {
     background-size: 242px;
