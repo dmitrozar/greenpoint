@@ -49,4 +49,22 @@
   .tasks__body {
     padding: 0 1rem;
   }
+  .feedback {
+    display: none;
+  }
+  .footer__body {
+    padding: 0 1rem;
+  }
+  .footer__left {
+    margin-bottom: 1.5rem;
+  }
+  .footer--social {
+    margin: 0 auto 2rem;
+  }
+}
+
+@media (max-width: 365px) {
+  .footer__body {
+    padding: 0 .5rem;
+  }
 }

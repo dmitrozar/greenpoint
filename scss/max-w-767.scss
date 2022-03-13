@@ -48,7 +48,9 @@ sans-serif;
             display: none;
         }
     }
+
     .tasks {
+
         &__title,
         &__description {
             text-align: center;
@@ -56,6 +58,33 @@ sans-serif;
 
         &__body {
             padding: 0 1rem;
+        }
+    }
+
+    .feedback {
+        display: none;
+    }
+
+    .footer {
+
+        &__body {
+            padding: 0 1rem;
+        }
+
+        &__left {
+            margin-bottom: 1.5rem;
+        }
+
+        &--social {
+            margin: 0 auto 2rem;
+        }
+    }
+}
+
+@media (max-width: 365px) {
+    .footer {
+        &__body {
+            padding: 0 .5rem;
         }
     }
 }

@@ -1,6 +1,6 @@
 @media (min-width: 1200px) {
   .container {
-    width: 1200px;
+    width: 1232px;
   }
   .header__brand {
     font: bold 2rem/2rem "Gotham", sans-serif;
@@ -71,6 +71,9 @@
   .stats {
     padding: 4.5rem 0 7.5rem;
   }
+  .tasks {
+    padding-bottom: 4.5rem;
+  }
   .tasks__content--left {
     -webkit-box-flex: 0;
         -ms-flex: 0 0 590px;
@@ -92,5 +95,80 @@
   }
   .tasks__content--right img {
     max-width: 265px;
+  }
+  .slider {
+    padding: 7.5rem 0;
+  }
+  .slider__body img {
+    max-width: 265px;
+  }
+  .slider__screen-wr {
+    background-size: 390px;
+  }
+  .slider__steps {
+    font: 500 24px/26px "Gotham", sans-serif;
+  }
+  .slider__steps span::before {
+    top: -50px;
+    font-size: 7.5rem;
+  }
+  .feedback {
+    padding: 4.5rem 0 7.5rem;
+  }
+  .feedback__title {
+    margin-bottom: 3rem;
+  }
+  .feedback__column:nth-child(4), .feedback__column:nth-child(5), .feedback__column:nth-child(6) {
+    margin-top: 2.5rem;
+  }
+  .feedback__card {
+    padding: 2.5rem 2rem;
+  }
+  .form {
+    padding: 4.5rem 0 7.5rem;
+  }
+  .form__body {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    padding-bottom: 66px;
+    background: bottom/contain no-repeat url(../images/form/bg.svg);
+  }
+  .form__content--left {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 540px;
+            flex: 0 0 540px;
+    padding-left: 3rem;
+    padding: 0 0 135px 3rem;
+    text-align: left;
+    color: #181818;
+  }
+  .form__title {
+    margin-bottom: 2rem;
+    font: 700 2.75rem/3rem "Gotham", sans-serif;
+    letter-spacing: -0.005em;
+  }
+  .form .title-w100 {
+    display: block;
+  }
+  .form__description {
+    font: 400 1rem/1.1875rem "Gotham", sans-serif;
+  }
+  .form__content--right {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 600px;
+            flex: 0 0 600px;
+  }
+  .form__card {
+    margin-left: 0;
+    -webkit-box-shadow: 0px 4px 10px #E9E9E9;
+            box-shadow: 0px 4px 10px #E9E9E9;
   }
 }

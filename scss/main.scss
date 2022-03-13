@@ -1,11 +1,17 @@
 @import "reset";
 @import "fonts";
 
-$color-brand: #1FC48B;
+$color-brand: rgba(31, 196, 139, 1);
 $color-black: #181818;
 $color-card-grey: #F9F9F9;
 $font-default: "Gotham",
 sans-serif;
+
+@mixin imgResponsive {
+    display: block;
+    width: 100%;
+    height: auto;
+}
 
 body {
     width: 100%;
@@ -81,9 +87,7 @@ body {
         flex: 0 0 48%;
 
         img {
-            display: block;
-            width: 100%;
-            height: auto;
+            @include imgResponsive;
         }
 
         &-wr {
@@ -156,6 +160,11 @@ body {
     color: #fff;
     background-color: $color-brand;
 
+    // &__container {
+    //     padding-left: 1rem;
+    //     padding-right: 1rem;
+    // }
+
     &__title {
         margin-bottom: 1.5rem;
         font: 400 1.5rem/1 $font-default;
@@ -202,6 +211,8 @@ body {
 }
 
 .slider {
+    padding: 4rem 0 3.75rem;
+
     &__body {
         img {
             max-width: 116px;
@@ -209,12 +220,194 @@ body {
             margin: 0 auto;
         }
     }
+
+    &__screen-wr {
+        background: center / 171px no-repeat url(../images/bg-view.png);
+    }
+
     &__steps {
+        padding: 3rem 0;
+        text-align: center;
         font: 500 1rem/1.25rem $font-default;
+
+        span {
+            position: relative;
+            z-index: 1;
+
+            &::before {
+                position: absolute;
+                top: -45px;
+                left: 0;
+                font: 900 6.25rem/1 $font-default;
+                color: #E4E4E4;
+                z-index: -1;
+            }
+        }
+
+        &.one__step {
+            span::before {
+                content: "1";
+            }
+        }
+
+        &.two__step {
+            span::before {
+                content: "2";
+            }
+        }
+
+        &.three__step {
+            span::before {
+                content: "3";
+            }
+        }
+    }
+}
+
+.feedback {
+    background-color: $color-card-grey;
+}
+
+.form {
+    padding: 2rem 0 2.5rem;
+    background-color: $color-brand;
+
+    .title-w100 {
+        display: block;
+        width: 100%;
+    }
+
+    &__content--left {
+        margin-bottom: 2rem;
+        text-align: center;
+        color: $color-card-grey;
+    }
+
+    &__title {
+        margin-bottom: 1.5rem;
+        font: 400 1.5rem/1.75rem $font-default;
+    }
+
+    &__description {
+        font: 400 .875rem/1.0625rem $font-default;
+    }
+
+    &__card {
+        padding: 1.5rem 1rem;
+        border-radius: .9375rem;
+        background-color: #fff;
+    }
+
+    &__input--item {
+        margin-bottom: 1.5rem;
+    }
+
+    label {
+        display: block;
+        margin-bottom: .5rem;
+    }
+
+    input {
+        display: block;
+        width: 100%;
+        height: 56px;
+        padding: 0 .75rem;
+        border: none;
+        border-radius: 5px;
+        font: 500 1rem/1 $font-default;
+        background-color: $color-card-grey;
+    }
+
+    textarea {
+        display: block;
+        width: 100%;
+        padding: .75rem;
+        border: none;
+        border-radius: 5px;
+        background-color: $color-card-grey;
+    }
+
+    &__button {
+        display: flex;
+        justify-content: flex-end;
+
+        a {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1rem 2rem;
+            border-radius: .5rem;
+            font: 500 .875rem/1 $font-default;
+            color: #fff;
+            background-color: $color-brand;
+            text-decoration: none;
+            cursor: pointer;
+
+            img {
+                margin-left: 1.125rem
+            }
+        }
+    }
+}
+
+.footer {
+    padding-bottom: 2rem;
+    background-color: $color-brand;
+
+    &__left {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        a {
+            flex: 0 0 48%;
+            display: block;
+            cursor: pointer;
+
+            img {
+                @include imgResponsive;
+            }
+        }
+    }
+
+    &__right {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    &--site {
+        order: 1;
+        text-align: center;
+        font: 400 .875rem/1.0625rem $font-default;
+        color: #fff;
+    }
+
+    &--social {
+        display: flex;
+        width: 136px;
+        justify-content: space-between;
+        order: 0;
+    }
+
+    .social-link {
+        width: 40px;
+
+        img {
+            @include imgResponsive;
+        }
     }
 }
 
 @import "min-w-768";
+
+@media (min-width: 800px) and (max-width: 1199px) {
+    .container {
+        width: 100%;
+        padding-left: 4.5rem;
+        padding-right: 4.5rem;
+    }
+}
 
 @import "min-w-1200";
 

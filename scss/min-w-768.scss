@@ -1,4 +1,4 @@
-$color-brand: #1FC48B;
+$color-brand: rgba(31, 196, 139, 1);
 $color-black: #181818;
 $color-card-grey: #F9F9F9;
 $font-default: "Gotham",
@@ -103,6 +103,192 @@ sans-serif;
                 height: auto;
                 margin: 0 auto;
             }
+        }
+    }
+
+    .stats {
+        &__content {
+            display: flex;
+        }
+
+        &__inner {
+            flex: 0 0 100%;
+        }
+
+        &__body {
+            max-width: 680px;
+            padding-left: 1rem;
+            padding-right: 1rem;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+
+    .slider {
+        &__screen-wr {
+            background-size: 242px;
+        }
+
+        &__body {
+            img {
+                max-width: 165px;
+            }
+        }
+
+        &__steps {
+            font-size: 1.125rem;
+        }
+    }
+
+    .feedback {
+        padding: 3.75rem 0 2.5rem;
+
+        &__title-wr {
+            text-align: center;
+        }
+
+        &__title {
+            margin-bottom: 2rem;
+            font: 400 42px/1 $font-default;
+        }
+
+        &__body {
+            display: flex;
+            flex-wrap: wrap;
+            width: 100%;
+            margin: 0 -1rem;
+        }
+
+        &__column {
+            padding: 0 1rem;
+
+            &.column--xl {
+                flex: 0 0 40%;
+                max-width: 40%;
+            }
+
+            &.column--lg {
+                flex: 0 0 30%;
+                max-width: 30%;
+            }
+
+            &.column--xs {
+                flex: 0 0 25%;
+                max-width: 25%;
+            }
+
+            &:nth-child(4),
+            &:nth-child(5),
+            &:nth-child(6) {
+                margin-top: 2rem;
+            }
+        }
+
+        &__card {
+            position: relative;
+            margin: 0 0 2rem;
+            padding: 1.5rem 1rem;
+            border-radius: 1.875rem;
+            font: 400 1rem/1.1875rem $font-default;
+            background-color: #fff;
+            box-shadow: 0px 4px 4px rgba(233, 233, 233, 0.25);
+
+            &::after {
+                position: absolute;
+                content: " ";
+                bottom: -18px;
+                left: 90px;
+                width: 36px;
+                height: 36px;
+                border-radius: 18px;
+                background-color: #fff;
+                box-shadow: 0px 4px 4px rgba(233, 233, 233, 0.25);
+            }
+        }
+
+        &__user {
+            position: relative;
+            display: flex;
+            align-items: center;
+            width: 100%;
+            padding-left: 1.5rem;
+
+            &::before {
+                position: absolute;
+                content: " ";
+                top: -1rem;
+                left: 80px;
+                width: 1rem;
+                height: 1rem;
+                border-radius: .5rem;
+                background-color: #fff;
+                box-shadow: 0px 4px 4px rgba(233, 233, 233, 0.25);
+            }
+        }
+
+        &__avatar {
+            flex: 0 0 64px;
+            margin-right: 12px;
+
+            img {
+                display: block;
+                width: 100%;
+                height: auto;
+            }
+        }
+
+        &__user--name {
+            font: 500 1.1875rem/1.4375rem $font-default;
+        }
+    }
+
+    .form {
+        .title-w100 {
+            display: none;
+        }
+
+        &__card {
+            max-width: 490px;
+            margin: 0 auto;
+            padding: 2.5rem 2rem;
+            border-radius: 1.875rem;
+        }
+
+        &__input--item {
+            margin-bottom: 2rem;
+        }
+    }
+
+    .footer {
+        &__body {
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        &__left {
+            flex: 0 0 290px;
+            a {
+                flex: 0 0 138px;
+                max-width: 138px;
+            }
+        }
+
+        &__right {
+            flex-direction: row;
+            align-items: center;
+        }
+        
+        &--site {
+            margin: {
+                right: 1rem;
+            };
+            order: 0;
+        }
+
+        &--social {
+            order: 1;
         }
     }
 }
