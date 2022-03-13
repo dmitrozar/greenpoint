@@ -198,7 +198,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  font: bold 1.5rem/1 "Gotham", sans-serif;
+  font: 600 1.5rem/1 "Gotham", sans-serif;
 }
 
 .header__brand img {
@@ -218,7 +218,7 @@ body {
 
 .header__title {
   margin-bottom: 1.5rem;
-  font: bold 1.875rem/2.25rem "Gotham", sans-serif;
+  font: 600 1.875rem/2.25rem "Gotham", sans-serif;
 }
 
 .header__description {
@@ -579,7 +579,10 @@ body {
     width: 648px;
   }
   .header__brand {
-    font: bold 1.75rem/2rem "Gotham", sans-serif;
+    font: 600 1.75rem/2rem "Gotham", sans-serif;
+  }
+  .header__description {
+    max-width: 330px;
   }
   .header__content {
     display: -webkit-box;
@@ -592,6 +595,26 @@ body {
   .header__content--left, .header__content--right {
     -ms-flex-preferred-size: 50%;
         flex-basis: 50%;
+  }
+  .header__content--right {
+    position: relative;
+  }
+  .header__content--right::before {
+    position: absolute;
+    top: 40px;
+    left: 140px;
+    bottom: 45px;
+    width: 100vw;
+    background: #1fc48b;
+    content: "";
+    border-radius: 3em;
+    -webkit-transform: skewX(15deg);
+    -ms-transform: skewX(15deg);
+    transform: skewX(15deg);
+    -webkit-transform-origin: bottom;
+    -ms-transform-origin: bottom;
+    transform-origin: bottom;
+    z-index: -1;
   }
   .header__content--btn {
     display: inline-block;
@@ -868,7 +891,7 @@ body {
     width: 1232px;
   }
   .header__brand {
-    font: bold 2rem/2rem "Gotham", sans-serif;
+    font: 600 2rem/2rem "Gotham", sans-serif;
   }
   .header__brand img {
     width: 2.875rem;
@@ -876,7 +899,7 @@ body {
   }
   .header__title {
     margin-bottom: 2.25rem;
-    font: bold 3.75rem/4.5rem "Gotham", sans-serif;
+    font: 600 3.75rem/4.5rem "Gotham", sans-serif;
   }
   .header__description {
     margin-bottom: 3.5rem;
@@ -886,6 +909,10 @@ body {
     -webkit-box-flex: 0;
         -ms-flex: 0 0 180px;
             flex: 0 0 180px;
+  }
+  .header__content--right img {
+    max-width: 440px;
+    height: auto;
   }
   .plants {
     padding: 4.5rem 0 7.5rem;
@@ -908,12 +935,12 @@ body {
   }
   .plants__card {
     position: relative;
-    padding: 2.5rem 0 3.5625rem 1rem;
+    padding: 2.5rem 0 3.5625rem 5rem;
   }
   .plants__card::before {
     position: absolute;
     top: 0;
-    left: 0;
+    left: 65px;
     bottom: 0;
     width: 100vw;
     background: #f9f9f9;

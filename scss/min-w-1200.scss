@@ -11,7 +11,7 @@ $padd-article: 4.5rem 0 7.5rem;
 
     .header {
         &__brand {
-            font: bold 2rem/2rem $font-default;
+            font: 600 2rem/2rem $font-default;
             img {
                 width: 2.875rem;
                 margin-right: 1rem;
@@ -20,7 +20,7 @@ $padd-article: 4.5rem 0 7.5rem;
 
         &__title {
             margin-bottom: 2.25rem;
-            font: bold 3.75rem/4.5rem $font-default;
+            font: 600 3.75rem/4.5rem $font-default;
         }
 
         &__description {
@@ -30,6 +30,13 @@ $padd-article: 4.5rem 0 7.5rem;
 
         &__content--btn {
             flex: 0 0 180px;
+        }
+
+        &__content--right {
+            img {
+                max-width: 440px;
+                height: auto;
+            }
         }
     }
 
@@ -61,11 +68,11 @@ $padd-article: 4.5rem 0 7.5rem;
 
         &__card {
             position: relative;
-            padding: 2.5rem 0 3.5625rem 1rem;
+            padding: 2.5rem 0 3.5625rem 5rem;
             &::before {
                 position: absolute;
                 top: 0;
-                left: 0;
+                left: 65px;
                 bottom: 0;
                 width: 100vw;
                 background: #f9f9f9;

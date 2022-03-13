@@ -11,7 +11,11 @@ sans-serif;
 
     .header {
         &__brand {
-            font: bold 1.75rem/2rem $font-default;
+            font: 600 1.75rem/2rem $font-default;
+        }
+
+        &__description {
+            max-width: 330px;
         }
 
         &__content {
@@ -21,6 +25,28 @@ sans-serif;
             &--left,
             &--right {
                 flex-basis: 50%;
+            }
+
+            &--right {
+                position: relative;
+
+                &::before {
+                    position: absolute;
+                    top: 40px;
+                    left: 140px;
+                    bottom: 45px;
+                    width: 100vw;
+                    background: $color-brand;
+                    content: "";
+                    border-radius: 3em;
+                    -webkit-transform: skewX(15deg);
+                    -ms-transform: skewX(15deg);
+                    transform: skewX(15deg);
+                    -webkit-transform-origin: bottom;
+                    -ms-transform-origin: bottom;
+                    transform-origin: bottom;
+                    z-index: -1;
+                }
             }
 
             &--btn {
@@ -269,6 +295,7 @@ sans-serif;
 
         &__left {
             flex: 0 0 290px;
+
             a {
                 flex: 0 0 138px;
                 max-width: 138px;
@@ -279,11 +306,13 @@ sans-serif;
             flex-direction: row;
             align-items: center;
         }
-        
+
         &--site {
             margin: {
                 right: 1rem;
-            };
+            }
+
+            ;
             order: 0;
         }
 

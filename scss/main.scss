@@ -47,7 +47,7 @@ body {
     &__brand {
         display: flex;
         align-items: center;
-        font: bold 1.5rem/1 $font-default;
+        font: 600 1.5rem/1 $font-default;
 
         img {
             width: 2rem;
@@ -67,7 +67,7 @@ body {
 
     &__title {
         margin-bottom: 1.5rem;
-        font: bold 1.875rem/2.25rem $font-default;
+        font: 600 1.875rem/2.25rem $font-default;
     }
 
     &__description {

@@ -3,7 +3,10 @@
     width: 648px;
   }
   .header__brand {
-    font: bold 1.75rem/2rem "Gotham", sans-serif;
+    font: 600 1.75rem/2rem "Gotham", sans-serif;
+  }
+  .header__description {
+    max-width: 330px;
   }
   .header__content {
     display: -webkit-box;
@@ -16,6 +19,26 @@
   .header__content--left, .header__content--right {
     -ms-flex-preferred-size: 50%;
         flex-basis: 50%;
+  }
+  .header__content--right {
+    position: relative;
+  }
+  .header__content--right::before {
+    position: absolute;
+    top: 40px;
+    left: 140px;
+    bottom: 45px;
+    width: 100vw;
+    background: #1fc48b;
+    content: "";
+    border-radius: 3em;
+    -webkit-transform: skewX(15deg);
+    -ms-transform: skewX(15deg);
+    transform: skewX(15deg);
+    -webkit-transform-origin: bottom;
+    -ms-transform-origin: bottom;
+    transform-origin: bottom;
+    z-index: -1;
   }
   .header__content--btn {
     display: inline-block;
