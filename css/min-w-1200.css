@@ -24,7 +24,12 @@
   }
   .header__content--right img {
     max-width: 440px;
-    height: auto;
+  }
+  .header__content--right::before {
+    top: 40px;
+    left: 140px;
+    bottom: 45px;
+    border-radius: 3em;
   }
   .plants {
     padding: 4.5rem 0 7.5rem;
@@ -100,10 +105,27 @@
     max-width: 620px;
   }
   .stats__body--right::before {
+    position: absolute;
+    top: 0;
     left: 120px;
+    bottom: 0;
+    width: 100vw;
+    background: #f9f9f9;
+    content: " ";
+    border-radius: 3em;
+    -webkit-transform: skewX(10deg);
+        -ms-transform: skewX(10deg);
+            transform: skewX(10deg);
+    -webkit-transform-origin: bottom;
+        -ms-transform-origin: bottom;
+            transform-origin: bottom;
+    opacity: 0.2;
+    z-index: 1;
   }
   .stats__body--right::after {
+    top: 78px;
     left: 180px;
+    bottom: 55px;
   }
   .stats__card {
     padding: 9rem 0 7.6rem;
@@ -111,7 +133,7 @@
   .stats__item:not(:last-child) {
     margin-bottom: 3rem;
   }
-  .stats__item {
+  .stats__item:not(:last-child), .stats__item:last-child {
     padding-left: 14rem;
   }
   .stats__item--heading {
@@ -166,6 +188,31 @@
   }
   .feedback__title {
     margin-bottom: 3rem;
+    font-size: 2.625rem;
+  }
+  .feedback__body {
+    margin: 0 -1rem;
+  }
+  .feedback__column {
+    padding: 0 1rem;
+  }
+  .feedback__column.column--xl {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 40%;
+            flex: 0 0 40%;
+    max-width: 40%;
+  }
+  .feedback__column.column--lg {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 30%;
+            flex: 0 0 30%;
+    max-width: 30%;
+  }
+  .feedback__column.column--xs {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 25%;
+            flex: 0 0 25%;
+    max-width: 25%;
   }
   .feedback__column:nth-child(4), .feedback__column:nth-child(5), .feedback__column:nth-child(6) {
     margin-top: 2.5rem;
@@ -217,7 +264,7 @@
   }
   .form__card {
     margin-left: 0;
-    -webkit-box-shadow: 0px 4px 10px #E9E9E9;
-            box-shadow: 0px 4px 10px #E9E9E9;
+    -webkit-box-shadow: 0px 4px 10px rgba(190, 197, 194, 0.2);
+            box-shadow: 0px 4px 10px rgba(190, 197, 194, 0.2);
   }
 }

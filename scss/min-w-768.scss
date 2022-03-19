@@ -3,10 +3,12 @@ $color-black: #181818;
 $color-card-grey: #F9F9F9;
 $font-default: "Gotham",
 sans-serif;
+$padd-article: 3.75rem 0;
 
 @media (min-width: 768px) {
     .container {
-        width: 648px;
+        padding-left: 3.5rem;
+        padding-right: 3.5rem;
     }
 
     .header {
@@ -30,15 +32,20 @@ sans-serif;
             &--right {
                 position: relative;
 
+                img {
+                    max-width: 203px;
+                    height: auto;
+                }
+
                 &::before {
                     position: absolute;
-                    top: 40px;
-                    left: 140px;
-                    bottom: 45px;
+                    top: 30px;
+                    left: 100px;
+                    bottom: 25px;
                     width: 100vw;
                     background: $color-brand;
                     content: "";
-                    border-radius: 3em;
+                    border-radius: 2em;
                     -webkit-transform: skewX(15deg);
                     -ms-transform: skewX(15deg);
                     transform: skewX(15deg);
@@ -63,7 +70,16 @@ sans-serif;
         }
     }
 
+    .plants,
+    .stats,
+    .slider,
+    .feedback {
+        padding: $padd-article;
+    }
+
     .plants {
+        padding: $padd-article;
+
         &__title {
             margin-bottom: 1rem;
             font: 400 1.75rem/1 $font-default;
@@ -99,6 +115,7 @@ sans-serif;
     }
 
     .tasks {
+        padding-bottom: 3.75rem;
         &__body {
             display: flex;
             width: 100%;
@@ -146,20 +163,25 @@ sans-serif;
             width: 100%;
             align-items: center;
         }
+
         &__body--left {
             flex: 0 0 50%;
             max-width: 50%;
+
             img {
                 max-width: 100%;
                 margin-bottom: 0;
             }
         }
+
         &__body--right {
             flex: 0 0 50%;
             max-width: 50%;
         }
+
         &__card {
             padding: 2rem 0;
+            margin-right: -1.5rem;
         }
 
         &__item {
@@ -167,7 +189,7 @@ sans-serif;
         }
 
         &__item--heading {
-            font:500 1.125rem/1.25rem $font-default;
+            font: 500 1.125rem/1.25rem $font-default;
         }
     }
 
@@ -196,38 +218,24 @@ sans-serif;
 
         &__title {
             margin-bottom: 2rem;
-            font: 400 42px/1 $font-default;
+            font: 400 1.75rem/1 $font-default;
         }
 
         &__body {
             display: flex;
             flex-wrap: wrap;
-            width: 100%;
-            margin: 0 -1rem;
+            margin: 0 -.5rem;
         }
 
         &__column {
-            padding: 0 1rem;
+            margin-top: 2rem;
+            padding: 0 .5rem;
 
-            &.column--xl {
-                flex: 0 0 40%;
-                max-width: 40%;
-            }
-
-            &.column--lg {
-                flex: 0 0 30%;
-                max-width: 30%;
-            }
-
+            &.column--xl,
+            &.column--lg,
             &.column--xs {
-                flex: 0 0 25%;
-                max-width: 25%;
-            }
-
-            &:nth-child(4),
-            &:nth-child(5),
-            &:nth-child(6) {
-                margin-top: 2rem;
+                flex: 0 0 50%;
+                max-width: 50%;
             }
         }
 

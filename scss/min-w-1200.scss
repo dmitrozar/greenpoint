@@ -1,7 +1,8 @@
 $color-brand: #06CF96;
 $color-black: #181818;
 $color-card-grey: #F9F9F9;
-$font-default: "Gotham", sans-serif;
+$font-default: "Gotham",
+sans-serif;
 $padd-article: 4.5rem 0 7.5rem;
 
 @media (min-width: 1200px) {
@@ -12,6 +13,7 @@ $padd-article: 4.5rem 0 7.5rem;
     .header {
         &__brand {
             font: 600 2rem/2rem $font-default;
+
             img {
                 width: 2.875rem;
                 margin-right: 1rem;
@@ -35,7 +37,14 @@ $padd-article: 4.5rem 0 7.5rem;
         &__content--right {
             img {
                 max-width: 440px;
-                height: auto;
+                // height: auto;
+            }
+
+            &::before {
+                top: 40px;
+                left: 140px;
+                bottom: 45px;
+                border-radius: 3em;
             }
         }
     }
@@ -69,6 +78,7 @@ $padd-article: 4.5rem 0 7.5rem;
         &__card {
             position: relative;
             padding: 2.5rem 0 3.5625rem 5rem;
+
             &::before {
                 position: absolute;
                 top: 0;
@@ -88,6 +98,7 @@ $padd-article: 4.5rem 0 7.5rem;
             &:not(:last-child) {
                 margin-bottom: 2rem;
             }
+
             &-heading {
                 margin-bottom: .5rem;
             }
@@ -96,6 +107,7 @@ $padd-article: 4.5rem 0 7.5rem;
 
     .stats {
         padding: $padd-article;
+
         &__title {
             margin-bottom: 1.5rem;
             font: 400 2.625rem/1 $font-default;
@@ -115,14 +127,30 @@ $padd-article: 4.5rem 0 7.5rem;
             flex: 0 0 auto;
             max-width: auto;
         }
+
         &__body--right {
             flex: 0 0 620px;
             max-width: 620px;
+
             &::before {
+                position: absolute;
+                top: 0;
                 left: 120px;
+                bottom: 0;
+                width: 100vw;
+                background: #f9f9f9;
+                content: " ";
+                border-radius: 3em;
+                transform: skewX(10deg);
+                transform-origin: bottom;
+                opacity: 0.2;
+                z-index: 1;
             }
+
             &::after {
+                top: 78px;
                 left: 180px;
+                bottom: 55px;
             }
         }
 
@@ -134,7 +162,8 @@ $padd-article: 4.5rem 0 7.5rem;
             margin-bottom: 3rem;
         }
 
-        &__item {
+        &__item:not(:last-child),
+        &__item:last-child {
             padding-left: 14rem;
         }
 
@@ -149,6 +178,7 @@ $padd-article: 4.5rem 0 7.5rem;
 
     .tasks {
         padding-bottom: 4.5rem;
+
         &__content--left {
             flex: 0 0 590px;
         }
@@ -175,16 +205,20 @@ $padd-article: 4.5rem 0 7.5rem;
 
     .slider {
         padding: 7.5rem 0;
+
         &__body {
             img {
                 max-width: 265px;
             }
         }
+
         &__screen-wr {
             background-size: 390px;
         }
+
         &__steps {
             font: 500 24px/26px $font-default;
+
             span {
                 &::before {
                     top: -50px;
@@ -196,11 +230,34 @@ $padd-article: 4.5rem 0 7.5rem;
 
     .feedback {
         padding: $padd-article;
+
         &__title {
             margin-bottom: 3rem;
+            font-size: 2.625rem;
+        }
+
+        &__body {
+            margin: 0 -1rem;
         }
 
         &__column {
+            padding: 0 1rem;
+
+            &.column--xl {
+                flex: 0 0 40%;
+                max-width: 40%;
+            }
+
+            &.column--lg {
+                flex: 0 0 30%;
+                max-width: 30%;
+            }
+
+            &.column--xs {
+                flex: 0 0 25%;
+                max-width: 25%;
+            }
+
             &:nth-child(4),
             &:nth-child(5),
             &:nth-child(6) {
@@ -215,13 +272,14 @@ $padd-article: 4.5rem 0 7.5rem;
 
     .form {
         padding: $padd-article;
+
         &__body {
             display: flex;
             width: 100%;
             justify-content: space-between;
             align-items: flex-end;
             padding-bottom: 66px;
-            background:  bottom / contain no-repeat url(../images/form/bg.svg);
+            background: bottom / contain no-repeat url(../images/form/bg.svg);
         }
 
         &__content--left {
@@ -252,7 +310,7 @@ $padd-article: 4.5rem 0 7.5rem;
 
         &__card {
             margin-left: 0;
-            box-shadow: 0px 4px 10px #E9E9E9;
+            box-shadow: 0px 4px 10px rgba(190, 197, 194, 0.2);
         }
     }
 }
