@@ -1,0 +1,122 @@
+@media (max-width: 321px) {
+  .container {
+    padding-left: .5rem;
+    padding-right: .5rem;
+  }
+  .header {
+    padding: 0.5rem 0 1.5rem;
+  }
+  .header__nav {
+    margin-top: .5rem;
+  }
+  .header__brand {
+    font-size: 1.25rem;
+  }
+  .header__brand img {
+    width: 1.5rem;
+  }
+  .header__inner {
+    padding: 0 .5rem;
+  }
+  .header__content {
+    padding: 0 .5rem;
+  }
+  .header__content--right img {
+    margin-bottom: 2rem;
+  }
+  .header__title {
+    margin-bottom: 1rem;
+    font-size: 1.75rem;
+    line-height: 1.2;
+  }
+  .header__description {
+    margin-bottom: 1.5rem;
+    font-size: .875rem;
+  }
+  .plants {
+    padding: 1rem 0 3rem;
+  }
+  .plants__title {
+    font-size: 1.25rem;
+    line-height: 1.4;
+  }
+  .plants__title-wr {
+    margin-bottom: 1.5rem;
+  }
+  .plants__list--item-icon {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 54px;
+            flex: 0 0 54px;
+    height: 54px;
+    margin-right: .5rem;
+  }
+  .plants__list--item-heading {
+    font-size: .9375rem;
+  }
+  .plants__list--item-description {
+    font-size: .8125rem;
+  }
+  .plants__list--item:not(:last-child) {
+    margin-bottom: 1rem;
+  }
+  .tasks {
+    padding: 0 0 3rem;
+  }
+  .tasks__title {
+    font-size: 1rem;
+    line-height: 130%;
+  }
+  .stats {
+    padding: 2rem 0 3rem;
+  }
+  .stats__title {
+    font-size: 1.25rem;
+  }
+  .stats__description {
+    font-size: .75rem;
+  }
+  .stats__body--right::after {
+    display: none;
+  }
+  .stats__card {
+    padding: 1rem .75rem;
+    border-radius: .5rem;
+    background-color: #F9F9F9;
+  }
+  .stats__item:last-child {
+    padding: 0;
+  }
+  .stats__item:not(:last-child) {
+    margin-bottom: 1rem;
+    padding: 0;
+  }
+  .stats__item--heading {
+    font-size: .875rem;
+    line-height: 1.1rem;
+  }
+  .stats__item--description {
+    font-size: .75rem;
+    line-height: 1rem;
+  }
+  .form {
+    padding: 2rem 0 3rem;
+  }
+  .form__title {
+    margin-bottom: 1rem;
+    font-size: 1.25rem;
+    line-height: 1.4;
+  }
+  .form__content--left {
+    margin-bottom: 1.5rem;
+  }
+  .form__card {
+    padding: 1rem .75rem;
+  }
+  .form label {
+    margin-bottom: .4rem;
+    font-size: .875rem;
+  }
+  .footer {
+    padding-bottom: 1.25rem;
+  }
+}

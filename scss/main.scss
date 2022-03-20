@@ -135,11 +135,11 @@ body {
 
         &-heading {
             margin-bottom: .25rem;
-            font: 600 1rem/1.1875 $font-default;
+            font: 600 1rem/1.1875rem $font-default;
         }
 
         &-description {
-            font: 400 .875rem/1.0625 $font-default;
+            font: 400 .875rem/1.0625rem $font-default;
         }
     }
 }
@@ -435,3 +435,5 @@ body {
 @import "min-w-1200";
 
 @import "max-w-767";
+
+@import "max_320";

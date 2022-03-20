@@ -1,0 +1,158 @@
+$color-brand: #06CF96;
+$color-black: #181818;
+$color-card-grey: #F9F9F9;
+$font-default: "Gotham",
+sans-serif;
+$padd-article: 3.75rem 0;
+
+@media (max-width: 321px) {
+    .container {
+        padding-left: .5rem;
+        padding-right: .5rem;
+    }
+
+    .header {
+        padding: 0.5rem 0 1.5rem;
+
+        &__nav {
+            margin-top: .5rem;
+        }
+
+        &__brand {
+            font-size: 1.25rem;
+
+            img {
+                width: 1.5rem;
+            }
+        }
+
+        &__inner {
+            padding: 0 .5rem;
+        }
+
+        &__content {
+            padding: 0 .5rem;
+
+            &--right img {
+                margin-bottom: 2rem;
+            }
+        }
+
+        &__title {
+            margin-bottom: 1rem;
+            font-size: 1.75rem;
+            line-height: 1.2;
+        }
+
+        &__description {
+            margin-bottom: 1.5rem;
+            font-size: .875rem;
+        }
+    }
+
+    .plants {
+        padding: 1rem 0 3rem;
+        &__title {
+            font-size: 1.25rem;
+            line-height: 1.4;
+
+            &-wr {
+                margin-bottom: 1.5rem;
+            }
+        }
+
+        &__list--item-icon {
+            flex: 0 0 54px;
+            height: 54px;
+            margin-right: .5rem;
+        }
+
+        &__list--item-heading {
+            font-size: .9375rem;
+        }
+
+        &__list--item-description {
+            font-size: .8125rem;
+        }
+
+        &__list--item:not(:last-child) {
+            margin-bottom: 1rem;
+        }
+    }
+
+    .tasks {
+        padding: 0 0 3rem;
+        &__title {
+            font-size: 1rem;
+            line-height: 130%;
+        }
+    }
+
+    .stats {
+        padding: 2rem 0 3rem;
+
+        &__title {
+            font-size: 1.25rem;
+        }
+
+        &__description {
+            font-size: .75rem;
+        }
+
+        &__body--right::after {
+            display: none;
+        }
+
+        &__card {
+            padding: 1rem .75rem;
+            border-radius: .5rem;
+            background-color: #F9F9F9;
+        }
+
+        &__item:last-child {
+            padding: 0;
+        }
+
+        &__item:not(:last-child) {
+            margin-bottom: 1rem;
+            padding: 0;
+        }
+
+        &__item--heading {
+            font-size: .875rem;
+            line-height: 1.1rem;
+        }
+
+        &__item--description {
+            font-size: .75rem;
+            line-height: 1rem;
+        }
+    }
+
+    .form {
+        padding: 2rem 0 3rem;
+
+        &__title {
+            margin-bottom: 1rem;
+            font-size: 1.25rem;
+            line-height: 1.4;
+        }
+
+        &__content--left {
+            margin-bottom: 1.5rem;
+        }
+
+        &__card {
+            padding: 1rem .75rem;
+        }
+
+        label {
+            margin-bottom: .4rem;
+            font-size: .875rem;
+        }
+    }
+
+    .footer {
+        padding-bottom: 1.25rem;
+    }
+}
